@@ -9,21 +9,24 @@
 //       return {
 //         ...state,
 //         books: {
-//           list: [...state.books.list, payload],
+//         ...state.books,
+//         list: [...state.books.list, payload],
 //         },
 //       };
 //     case "REMOVE_BOOK":
 //       return {
 //         ...state,
 //         books: {
-//           list: state.books.list.filter((book) => book.id !== payload),
+//         ...state.books,
+//         list: state.books.list.filter((book) => book.id !== payload),
 //         },
 //       };
 //     case "UPDATE_BOOK":
 //       return {
 //         ...state,
 //         books: {
-//           list: state.books.list.map((book) => {
+//         ...state.books,
+//         list: state.books.list.map((book) => {
 //             if (book.id === payload.id) {
 //               return payload;
 //             }
